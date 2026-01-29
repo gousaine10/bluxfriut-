@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blox Fruits - Permanent Rewards 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header">
+        <img src="images/logo.png" alt="Blox Fruits Logo" class="logo">
+        <h1>Claim Your Permanent Rewards</h1>
+    </div>
+
+    <section class="selection-container">
+        <h2>Select 3 Permanent Gifts</h2>
+        <div class="slots" id="slots">
+            <div class="slot" id="slot-0"></div>
+            <div class="slot" id="slot-1"></div>
+            <div class="slot" id="slot-2"></div>
+        </div>
+        <button id="continue-btn" class="btn disabled" disabled>CONTINUE</button>
+    </section>
+
+    <div class="gallery" id="fruit-gallery">
+        </div>
+
+    <div id="modal-username" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Enter Roblox Username</h3>
+            <input type="text" id="username-input" placeholder="Type Username here..." class="rbx-input">
+            <div class="modal-btns">
+                <button id="cancel-btn" class="btn-red">CANCEL</button>
+                <button id="search-btn" class="btn-green">CHECK ACCOUNT</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-profile" class="modal" style="display: none;">
+        <div class="modal-content">
+            <img id="user-avatar" src="" alt="Avatar" class="avatar-img">
+            <h2 id="user-name">Username</h2>
+            <div class="stats-grid">
+                <div class="stat">Followers: <span id="user-followers">0</span></div>
+                <div class="stat">Following: <span id="user-following">0</span></div>
+            </div>
+            <p id="user-activity" class="activity-text">Activity: Offline</p>
+            <button id="final-btn" class="btn-green full-width">SEND REWARDS NOW</button>
+        </div>
+    </div>
+
+    <audio id="snd-tap" src="media/tap.mp3"></audio>
+    <audio id="snd-select" src="media/selection.mp3"></audio>
+    <audio id="snd-error" src="media/error.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
