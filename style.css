@@ -1,0 +1,95 @@
+:root {
+    --color-g1: #00f2ff; /* سماوي سيبراني */
+    --color-g2: #ff003c; /* أحمر التخريب */
+    --bg-dark: #020204;
+}
+
+body {
+    margin: 0; background: var(--bg-dark); color: #fff;
+    font-family: 'Rajdhani', sans-serif; overflow: hidden;
+}
+
+/* تأثير خطوط المسح (Scanlines) على الشاشة كاملة */
+.scanlines {
+    position: fixed; inset: 0; pointer-events: none; z-index: 99;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0.3) 0px, rgba(0,0,0,0.3) 1px, transparent 1px, transparent 2px);
+    background-size: 100% 4px; animation: scrollScan 10s linear infinite;
+}
+@keyframes scrollScan { 0% { background-position: 0 0; } 100% { background-position: 0 100%; } }
+
+.full-stage {
+    position: fixed; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; background: radial-gradient(#1a000a, #000);
+}
+
+/* --- تأثير النص المخرب (Glitch Text Effect) --- */
+.glitch-text {
+    position: relative; font-family: 'Orbitron'; letter-spacing: 2px;
+    text-shadow: 2px 0 var(--color-g2), -2px 0 var(--color-g1);
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+.glitch-text::before, .glitch-text::after {
+    content: attr(data-text); position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+    opacity: 0.8;
+}
+.glitch-text::before {
+    color: var(--color-g1); z-index: -1; animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+.glitch-text::after {
+    color: var(--color-g2); z-index: -2; animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+@keyframes glitch-anim {
+    0% { clip-path: inset(10% 0 30% 0); transform: translate(-2px, 2px); }
+    20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -2px); }
+    40% { clip-path: inset(20% 0 50% 0); transform: translate(-2px, 0); }
+    60% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+    100% { clip-path: inset(80% 0 5% 0); transform: translate(2px, 2px); }
+}
+.massive { font-size: 3rem; }
+
+/* --- لودر البداية المخترق --- */
+.hacked-loader { width: 80%; height: 5px; background: #222; margin-top: 20px; position: relative; overflow: hidden; }
+.hack-bar {
+    width: 100%; height: 100%; background: var(--color-g2);
+    transform: translateX(-100%); animation: hackLoad 3s forwards cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes hackLoad { 100% { transform: translateX(0); } }
+
+/* --- كروت الجوائز مع تأثير اللهب الكهربائي --- */
+.reward-glitch-card {
+    background: rgba(0,0,0,0.7); border: 2px solid #333; padding: 15px;
+    text-align: center; cursor: pointer; position: relative; transition: 0.2s;
+}
+.reward-glitch-card:hover {
+    border-color: var(--color-g2);
+    box-shadow: 0 0 15px var(--color-g2), inset 0 0 10px var(--color-g1); /* لهب مزدوج */
+    transform: scale(1.05) skewX(-2deg); /* اهتزاز بسيط */
+}
+.reward-glitch-card img { width: 80px; filter: drop-shadow(0 0 5px var(--color-g1)); }
+
+/* --- خانة اليوزر القوية جداً (Strong Input) --- */
+.terminal-hack { background: rgba(0,0,0,0.8); padding: 30px; border: 2px solid var(--color-g2); box-shadow: 0 0 30px rgba(255,0,60,0.3); }
+.strong-input-box { position: relative; width: 320px; margin: 25px 0; }
+#rbx-user {
+    width: 100%; padding: 18px; background: #080000; border: 3px solid #333;
+    color: var(--color-g1); font-family: 'Orbitron'; font-size: 20px; text-align: center; outline: none;
+}
+#rbx-user:focus { border-color: var(--color-g1); box-shadow: 0 0 25px var(--color-g1); }
+.electric-border {
+    position: absolute; inset: -5px; border: 2px dashed var(--color-g2);
+    opacity: 0.4; pointer-events: none; animation: pulseElec 0.5s infinite alternate;
+}
+@keyframes pulseElec { from { opacity: 0.2; } to { opacity: 0.6; } }
+
+/* --- الترس النهائي --- */
+.broken-gear { font-size: 90px; animation: spinBroken 0.5s infinite linear; filter: drop-shadow(0 0 10px var(--color-g2)); margin-bottom: 20px; }
+@keyframes spinBroken { 0% { transform: rotate(0deg) skewX(0deg); } 50% { transform: rotate(180deg) skewX(5deg); } 100% { transform: rotate(360deg) skewX(0deg); } }
+.blink { animation: blinkText 0.8s infinite; }
+@keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* أزرار وفتحات */
+.empty-slot { width: 90px; height: 110px; background: #111; border: 2px dashed #444; }
+.grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+.glitch-btn { background: var(--color-g2); color: #fff; border: none; padding: 15px 30px; font-family: 'Orbitron'; font-size: 18px; cursor: pointer; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
+.glitch-btn:hover { background: var(--color-g1); color: #000; }
+.error-terminal { color: var(--color-g2); font-family: 'Orbitron'; margin-top: 10px; display: none; }

